@@ -1,0 +1,9 @@
+# macOS Finder
+.DS_Store
+
+# Ignore files in src/ and output/ but keep directories
+src/*
+!src/.gitkeep 
+
+output/*
+!output/.gitkeep 
