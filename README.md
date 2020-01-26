@@ -1,11 +1,17 @@
-# sprite-palette-extractor
-Extracts palette information from sets of spritesheets
+# Sprite Palette Extractor
+
+Extracts palette information from sets of spritesheets. This is just a script I wrote for a personal project so lots of settings are hardcoded. Alter as needed if you are actually using this.
 
 ## Setup
 
 Install ImageMagick if necessary.
 
     brew install imagemagick
+
+Clone the repository.
+
+    git clone git@github.com:danielsellergren/sprite-palette-extractor.git
+    cd sprite-palette-extractor/
 
 Install dependencies.
 
