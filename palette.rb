@@ -54,13 +54,17 @@ end
 
 # Create output file
 output_file = File.new("#{directory}/output/index.html", "w+")
-output_file.puts '<!doctype html><html><head></head><body>'
+output_file.puts '<!doctype html><html><head></head><body style="font-family: Georgia; width: 80%; margin: 0 auto;">'
+output_file.puts '<h1>Palette for ' + directory + '/</h1>'
 
 # Add all unique hex values to the output file in their own divs
 all_hex.uniq.sort.each do |hex|
-  output_file.puts '<div style="width: 50px; height: 50px; float: left; background-color: #' + hex + ';"></div>'
+  output_file.puts '<div style="float: left; margin: 10px"><div>#' + hex.upcase + '</div><div style="width: 100px; height: 100px; float: left; background-color: #' + hex.upcase + ';"></div></div>'
 end
 
 # Close HTML tags and close file
 output_file.puts '</html></body>'
 output_file.close
+
+# Output results to stdin
+puts all_hex
